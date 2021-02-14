@@ -12,11 +12,11 @@ for (var i = 0; i <= lis.length - 1; i++) {
         items[index].style.display = 'block';
     }
 }
-
+// 主页打字效果 待写
 // 第一屏
-var firstCnt = '<a href="https://u.mr90.top/" target="_blank">输入正确!!<br>欢迎你来到我的博客</a><br><p>关于：此屏采用了js中的node的增加与删除,灵活使用孩子节点</p>';
 var itemBtn = document.querySelector('.item_btn');
 var itspan = document.querySelector('.item').querySelector('span');
+var itemImg = document.querySelector('.itemImg')
 var ibtn = itemBtn.children[1];
 ibtn.onclick = function () {
     var spanC = document.createElement('i');
@@ -27,8 +27,9 @@ ibtn.onclick = function () {
         itspan.appendChild(spanC);
         spanC.innerHTML = firstCnt;
         itemBtn.style.display = 'none';
+        itemImg.src = item1author;
         if (itspan.children.length != 1) {
-            itspan.removeChild(itspan.children[0]);            
+            itspan.removeChild(itspan.children[0]);
         }
     }
 }
