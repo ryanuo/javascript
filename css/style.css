@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+html{
+    font-size: 16px;
+}
 body {
     font-size: 16px;
     background: -webkit-linear-gradient(left, #46211a2d, #5f3b5352, #44181a3d);
@@ -21,20 +23,29 @@ body {
 }
 .title h1{
     text-align: center;
-    font-size: 3.125rem;
-    margin: 3.125rem;
+    font-size: 2.625rem;
+    margin: 3.125rem;   
     text-shadow: .3125rem .3125rem #0981593f;
-    transition: text-shadow .3s;
+    animation: falsh 2s infinite linear;
+}
+
+@keyframes falsh{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: .2;
+    }
 }
 .title h5{
     text-align: center;
 }
 /* 底部样式 */
 footer{
-    position: absolute;
-    left: 44%;
-    transform: translateX(-40%);
-    bottom: 0;
+    width: 100%;
+    height: 6.25rem;
+    text-align: center;
+    margin-top: 1.25rem;
 }
 .github-badge {
     margin-left: 5px;
@@ -113,12 +124,18 @@ a {
     overflow: hidden;
     box-shadow: .0625rem .0625rem .1875rem #888;
 }
+/* 移动端适配 */
+@media screen and (max-width:970px){
+    #tab{
+        width: 20rem;
+    }
+}
 
 .tab ul {
     display: inline-flex;
     width: 100%;
     align-items: center;
-    background-color: #ccc;
+    
     font-size: .8125rem;
 }
 
@@ -131,6 +148,7 @@ a {
     border-top: 0;
     border-left: 0;
     transition: all .6s;
+    background-color: #ccc;
 }
 
 .tab_con {
@@ -174,11 +192,13 @@ input, button {
 }
 
 /* 第一页设计 */
-
+.item{
+    text-align: center;
+}
 .item img {
-    margin: .625rem 0 0 11.0625rem;
+    margin: 1.5625rem auto .625rem;
     border-radius: .625rem;
-    width: 9.375rem;
+    width: 8.375rem;
     filter: blur(.5px);
 }
 
@@ -190,13 +210,13 @@ input, button {
 }
 
 .item #blog {
-    margin: 1.25rem 0 0 7.625rem;
     width: 12.5rem;
     height: 1.25rem;
     line-height: 1.25rem;
     padding-left: .1875rem;
     border-radius: .4375rem;
     border: .0625rem solid #12774d;
+    font-size: .75rem;
 }
 
 .item .b-log {
@@ -219,6 +239,6 @@ input, button {
     font-size: .75rem;
     color: #236170;
     text-align: center;
-    margin-top: 1.3125rem;
+    margin-top: 1.1125rem;
     display: block;
 }
