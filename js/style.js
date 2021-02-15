@@ -66,5 +66,4 @@ if (dateH >= 22 || dateH <= 7) {
 }
 else {
     document.documentElement.className = 'theme-light';
-
 }
