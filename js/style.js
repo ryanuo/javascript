@@ -34,15 +34,37 @@ ibtn.onclick = function () {
     }
 }
 // 页面滑动效果
-var mo=function(e){e.preventDefault();};
-function stop(){
-        document.body.style.overflow='hidden';       
-        document.addEventListener("touchmove",mo,{passive:false});//禁止页面滑动
+var mo = function (e) { e.preventDefault(); };
+function stop() {
+    document.body.style.overflow = 'hidden';
+    document.addEventListener("touchmove", mo, { passive: false });//禁止页面滑动
 }
 //直接默认不让滑动
 stop();
 /***取消滑动限制***/
-function move(){
-        document.body.style.overflow='';//出现滚动条
-        document.removeEventListener("touchmove",mo,{passive:false});       
+function move() {
+    document.body.style.overflow = '';//出现滚动条
+    document.removeEventListener("touchmove", mo, { passive: false });
+}
+
+// 黑白主题，根据时间变化或者点击实现
+var themeChage = document.querySelector('.tab_con').querySelector('.theme');
+var date = new Date();
+var dateH = date.getHours()
+var flag = 0;
+themeChage.onclick = function () {
+    if (flag == 0) {
+        document.documentElement.className = 'theme-dark';
+        flag = 1;
+    } else {
+        document.documentElement.className = 'theme-light';
+        flag = 0;
+    }
+}
+if (dateH >= 22 || dateH <= 7) {
+    document.documentElement.className = 'theme-dark';
+}
+else {
+    document.documentElement.className = 'theme-light';
+
 }
