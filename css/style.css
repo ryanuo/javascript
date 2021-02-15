@@ -44,7 +44,7 @@ header .d1 p, header .d2 p {
 }
 
 .theme-dark {
-    background: -webkit-linear-gradient(left, rgba(20, 20, 18, 0.933), rgba(37, 35, 37, 0.918), rgba(17, 13, 13, 0.933));
+    background: -webkit-linear-gradient(left, rgba(7, 7, 6, 0.973), rgba(10, 10, 10, 0.973));
     color: #fff;
 }
 
