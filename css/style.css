@@ -233,7 +233,22 @@ input, button {
     width: 8.375rem;
     filter: blur(.5px);
 }
-
+.item a .img1{
+    border-radius: 3.15rem;
+    width: 6.375rem;
+}
+.item a .img1:hover{
+    animation: rotate 1.5s;
+    transform-origin: center;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 .item img:hover {
     transition: all .3s linear;
     transform: scale(1.01);

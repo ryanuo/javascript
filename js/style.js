@@ -28,6 +28,7 @@ ibtn.onclick = function () {
         spanC.innerHTML = firstCnt;
         itemBtn.style.display = 'none';
         itemImg.src = item1author;
+        itemImg.className = 'itemImg img1';
         if (itspan.children.length != 1) {
             itspan.removeChild(itspan.children[0]);
         }
