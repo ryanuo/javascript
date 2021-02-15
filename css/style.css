@@ -6,21 +6,45 @@
 html {
     font-size: 16px;
 }
+
 /* 灯笼优化 */
-header .d1 p,header .d2 p{
-    top:-0.875rem;
+
+header .d1 p, header .d2 p {
+    top: -0.875rem;
+}
+/* Tab图标 */
+.tab1 li:nth-child(1)::before{
+    content: '\f863';
+    font-family: "Font Awesome 5 Free";
+    color: #e36161;
+    margin-right: .125rem;
+    display: inline-block;
+    animation: iconrotate 2s infinite linear;
+    transform-origin: center;
+    font-size: .875rem;
+}
+@keyframes iconrotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 /* 黑白主题转换 */
-.theme{
+
+.theme {
     position: absolute;
     right: .5625rem;
     bottom: .25rem;
 }
+
 .theme-light {
-    background: -webkit-linear-gradient(left, #46211a2d, #5f3b5352, #44181a3d);
+    background: -webkit-linear-gradient(left, rgba(70, 33, 26, 0.176), rgba(95, 59, 83, 0.322), rgba(68, 24, 26, 0.239));
 }
-.theme-dark{
-    background:-webkit-linear-gradient(left, #141412ee, #252325ea, #110d0dee);
+
+.theme-dark {
+    background: -webkit-linear-gradient(left, rgba(20, 20, 18, 0.933), rgba(37, 35, 37, 0.918), rgba(17, 13, 13, 0.933));
     color: #fff;
 }
 
@@ -46,7 +70,7 @@ body {
     text-align: center;
     font-size: 2.625rem;
     margin: 3.125rem;
-    text-shadow: .3125rem .3125rem #0981593f;
+    text-shadow: .3125rem .3125rem rgba(9, 129, 89, 0.247);
     animation: falsh 2s infinite linear;
 }
 
@@ -159,6 +183,9 @@ a {
     #tab {
         width: 20rem;
     }
+    .tab1 li:nth-child(1)::before{
+        display: none;
+    }
 }
 
 .tab ul {
@@ -178,7 +205,7 @@ a {
     border-left: 0;
     font-weight: 550;
     transition: all .6s;
-    background-color: #6dc6c887
+    background-color: rgb(200,109, 109,.28);
 }
 
 .tab_con {
@@ -187,23 +214,28 @@ a {
 }
 
 .item:nth-child(1) {
-    background: -webkit-linear-gradient(left, #8b484818, #a2aa551a, #3655b91a);
+    background: linear-gradient(left, rgba(138, 71, 71, 0.094), rgba(162, 170, 85, 0.102), rgba(54, 85, 185, 0.102));
+    background: -webkit-linear-gradient(left, rgba(138, 71, 71, 0.094), rgba(162, 170, 85, 0.102), rgba(54, 85, 185, 0.102));
+    background: -moz-linear-gradient(left, rgba(138, 71, 71, 0.094), rgba(162, 170, 85, 0.102), rgba(54, 85, 185, 0.102));
+    background: -o-linear-gradient(left, rgba(138, 71, 71, 0.094), rgba(162, 170, 85, 0.102), rgba(54, 85, 185, 0.102));
+    background: -ms-linear-gradient(left, rgba(138, 71, 71, 0.094), rgba(162, 170, 85, 0.102), rgba(54, 85, 185, 0.102));
+
 }
 
 .item:nth-child(2) {
-    background: -webkit-linear-gradient(left, #4f488b28, #5599aa1e, #b9368228);
+    background: -webkit-linear-gradient(left, rgba(79, 72, 139, 0.157), rgba(85, 153, 170, 0.118), rgba(185, 54, 130, 0.157));
 }
 
 .item:nth-child(3) {
-    background: -webkit-linear-gradient(left, #8b584833, #7655aa34, #9db93633);
+    background: -webkit-linear-gradient(left, rgba(139, 88, 72, 0.2), rgba(118, 85, 170, 0.204), rgba(157, 185, 54, 0.2));
 }
 
 .item:nth-child(4) {
-    background: -webkit-linear-gradient(left, #488b7a33, #55aa9f3a, #b9a13636);
+    background: -webkit-linear-gradient(left, rgba(72, 139, 122, 0.2), rgba(85, 170, 159, 0.227), rgba(185, 161, 54, 0.212));
 }
 
 .item:nth-child(5) {
-    background: -webkit-linear-gradient(left, #48498b49, #5577aa41, #36b9ae3d);
+    background: -webkit-linear-gradient(left, rgba(72, 73, 139, 0.286), rgba(85, 119, 170, 0.255), rgba(54, 185, 174, 0.239));
 }
 
 .tab ul li:hover {
@@ -233,26 +265,30 @@ input, button {
     width: 8.375rem;
     filter: blur(.5px);
 }
-.item a .img1{
+
+.item a .img1 {
     border-radius: 3.15rem;
     width: 6.375rem;
 }
-.item a .img1:hover{
+
+.item a .img1:hover {
     animation: rotate 1.5s;
     transform-origin: center;
 }
+
 @keyframes rotate {
-    0%{
+    0% {
         transform: rotate(0);
     }
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }
+
 .item img:hover {
     transition: all .3s linear;
     transform: scale(1.01);
-    box-shadow: .0625rem .125rem .1875rem #0546305d;
+    box-shadow: .0625rem .125rem .1875rem rgba(5, 70, 48, 0.365);
     filter: blur(1px);
 }
 

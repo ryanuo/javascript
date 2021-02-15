@@ -16,9 +16,7 @@
 
 1. 第一屏
 - 使用了`JavaScript`中的`node`操作比如node的增删，大量使用节点
-{% folding green, 查看图例 %}
 ![](https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/tab1.gif)
-{% endfolding %}
 2. 第二屏 待写
 3. 第三屏 待写
 4. 第四屏 待写
