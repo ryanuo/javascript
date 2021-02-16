@@ -53,18 +53,27 @@ var themeChage = document.querySelector('.tab_con').querySelector('.theme');
 var date = new Date();
 var dateH = date.getHours()
 var flag = 0;
-themeChage.onclick = function () {
-    if (flag == 0) {
-        document.documentElement.className = 'theme-dark';
-        flag = 1;
-    } else {
-        document.documentElement.className = 'theme-light';
-        flag = 0;
-    }
-}
 if (dateH >= 22 || dateH <= 7) {
     document.documentElement.className = 'theme-dark';
+    themeChage.onclick = function () {
+        if (flag == 0) {
+            document.documentElement.className = 'theme-light';
+            flag = 1;
+        } else {
+            document.documentElement.className = 'theme-dark';
+            flag = 0;
+        }
+    }
 }
 else {
     document.documentElement.className = 'theme-light';
+    themeChage.onclick = function () {
+        if (flag == 0) {
+            document.documentElement.className = 'theme-dark';
+            flag = 1;
+        } else {
+            document.documentElement.className = 'theme-light';
+            flag = 0;
+        }
+    }
 }

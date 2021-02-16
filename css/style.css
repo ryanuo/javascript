@@ -6,7 +6,14 @@
 html {
     font-size: 16px;
 }
+/* 鼠标样式 */
+body{
+    cursor:url(https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/default.cur),default;
+}
+a,input,button,img,i{
+    cursor: url(https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/pointer.cur),pointer;
 
+}
 /* 灯笼优化 */
 
 header .d1 p, header .d2 p {
@@ -296,7 +303,7 @@ input, button {
     width: 12.5rem;
     height: 1.25rem;
     line-height: 1.25rem;
-    padding-left: .1875rem;
+    padding-left: .5875rem;
     border-radius: .4375rem;
     border: .0625rem solid #12774d;
     font-size: .75rem;
@@ -304,11 +311,12 @@ input, button {
 
 .item .b-log {
     margin-left: .3125rem;
-    height: 1.4375rem;
-    line-height: 1.25rem;
+    height: 1.1375rem;
+    line-height: 1.05rem;
     border-radius: .4375rem;
+    width: 3.125rem;
     border: .0625rem solid #12774d;
-    font-size: .75rem;
+    font-size: .65rem;
 }
 
 .item .b-log:hover {
