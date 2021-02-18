@@ -10,7 +10,7 @@ html {
 body{
     cursor:url(https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/default.cur),default;
 }
-a,input,button,img,i{
+a,input,button,img,i,em{
     cursor: url(https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/pointer.cur),pointer;
 
 }
@@ -20,17 +20,41 @@ header .d1 p, header .d2 p {
     top: -0.875rem;
 }
 /* Tab图标 */
-.tab1 li:nth-child(1)::before{
-    content: '\f863';
+.tab1 li::before{
     font-family: "Font Awesome 5 Free";
-    color: #e36161;
     margin-right: .125rem;
-    display: inline-block;
-    animation: iconrotate 2s infinite linear;
+    display: inline-block;  
     transform-origin: center;
     font-size: .875rem;
 }
-@keyframes iconrotate{
+.tab1 li:nth-child(1)::before{
+    content: '\f863';
+    color: #e36161;
+    animation: iconrotate1 2s infinite linear;
+}
+.tab1 li:nth-child(2)::before{
+    content: '\f19d';
+    color:#544141;
+    animation: iconrotate2 2.2s infinite linear;
+}
+@keyframes iconrotate2{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+@keyframes iconrotate1{
     0%{
         transform: rotate(0);
     }
@@ -190,19 +214,19 @@ a {
     #tab {
         width: 20rem;
     }
-    .tab1 li:nth-child(1)::before{
+    .tab1 li::before{
         display: none;
     }
 }
 
-.tab ul {
+.tab1{
     display: inline-flex;
     width: 100%;
     align-items: center;
     font-size: .8125rem;
 }
 
-.tab ul li {
+.tab1 li {
     text-align: center;
     flex: 20%;
     padding: .3125rem;
@@ -245,7 +269,7 @@ a {
     background: -webkit-linear-gradient(left, rgba(72, 73, 139, 0.286), rgba(85, 119, 170, 0.255), rgba(54, 185, 174, 0.239));
 }
 
-.tab ul li:hover {
+.tab1 li:hover {
     background-color: #12774d;
     color: white;
 }
@@ -262,23 +286,23 @@ input, button {
 
 /* 第一页设计 */
 
-.item {
+.item:nth-child(1) {
     text-align: center;
 }
 
-.item img {
+.item:nth-child(1) img {
     margin: 1.5625rem auto .625rem;
     border-radius: .625rem;
     width: 8.375rem;
     filter: blur(.5px);
 }
 
-.item a .img1 {
+.item:nth-child(1) a .img1 {
     border-radius: 3.15rem;
     width: 6.375rem;
 }
 
-.item a .img1:hover {
+.item:nth-child(1) a .img1:hover {
     animation: rotate 1.5s;
     transform-origin: center;
 }
@@ -292,7 +316,7 @@ input, button {
     }
 }
 
-.item img:hover {
+.item:nth-child(1) img:hover {
     transition: all .3s linear;
     transform: scale(1.01);
     box-shadow: .0625rem .125rem .1875rem rgba(5, 70, 48, 0.365);
@@ -332,4 +356,120 @@ input, button {
     text-align: center;
     margin-top: 1.1125rem;
     display: block;
+}
+
+/* 第二屏设计 */
+
+.tab2 {
+    position: relative;
+    width: 15.4375rem;
+    height: 8.125rem;
+    margin: 0 auto;
+    padding-top:2rem;
+}
+.tab2 li{
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+}
+.tab2 li:nth-child(1) span::after{   
+    width: 6.25rem;
+    background-color: #0d7275; 
+    animation: movejd 1s linear;  
+}
+.tab2 li:nth-child(2) span::after{   
+    width: 8.25rem;
+    background-color: #334450;
+    animation: movejd 1.2s linear;
+}
+.tab2 li:nth-child(3) span::after{   
+    width: 5.25rem;
+    background-color: #a14661;
+    animation: movejd .8s linear;
+}
+.tab2 li span::after{
+    content: '';
+    position: absolute;  
+    height: .625rem;
+    top: -2px;
+    left: -2px;
+    display: inline-block;
+    border-radius: .625rem;
+    background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, 0.4) 25%,transparent 0,transparent 50%,hsla(0, 0%, 100%, 0.4) 0,hsla(0,0%,100%,.4) 75%,transparent 0,transparent); 
+}
+@keyframes movejd{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+/* 字体样式 */
+.tab2 li:nth-child(1)::before{
+    content: '\f13b';   
+}
+.tab2 li:nth-child(2)::before{
+    content: '\f13c';   
+}
+.tab2 li:nth-child(3)::before{
+    content: '\f3b9';   
+}
+
+.tab2 li::before{
+    font-family:"Font Awesome 5 Brands";
+    display: inline-block;
+    margin-right: .1875rem;
+}
+.tab2 span{
+    position: absolute;
+    left: 66px;
+    top: 11px;
+    width: 9.375rem;
+    height: .625rem;
+    display: inline-block;
+    margin-left: 1.875rem;
+    border: .125rem solid #4d4d4d;
+    border-radius: .625rem;
+}
+.item:nth-child(2) .btn-2{
+    width: 5.125rem;
+    height: 1.65rem;
+    background-color: rgba(164, 124, 83, 0.529);
+    border-radius: .725rem;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0px 0px 2px 0px rgb(57, 58, 33);
+}
+.item:nth-child(2) .btn-2:hover{
+    transition: all .4s;
+    background-color: rgba(202, 166, 100, 0.493);
+    color: #000;
+    font-size: .875rem;
+    font-weight: 600;
+}
+/* 第二屏点击后的样式 */
+.conC{
+    width: 100%;
+    height: 6.25rem;
+    padding: .25rem .625rem 0;
+}
+.conC li{
+    border: .125rem solid #3b8d99;
+    width: 100%;
+    font-size: .75rem;
+    text-indent: 2rem;
+    border-radius: .375rem;
+    background-color: #6cbeca;
+}
+.conC li em{
+    color: red;
+    padding: 0;
+    margin: 0;
+}
+.conC img{
+    margin: 0 auto;
+    display: block;
+    width: 7.75rem;
+    border-radius: .375rem;
 }

@@ -17,7 +17,9 @@
 1. 第一屏
 - 使用了`JavaScript`中的`node`操作比如node的增删，大量使用节点
 ![](https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/tab1.gif)
-2. 第二屏 待写
+2. 第二屏 
+- 第二屏沿用第一屏node增删节点，使用BOM，定时器等等
+![](https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/tab2dw.gif)
 3. 第三屏 待写
 4. 第四屏 待写
 5. 第五屏 待写

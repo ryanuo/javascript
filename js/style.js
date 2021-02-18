@@ -5,7 +5,7 @@ for (var i = 0; i <= lis.length - 1; i++) {
     lis[i].setAttribute('index', i);
     lis[i].onclick = function () {
         var index = this.getAttribute('index');
-        console.log(index);
+        // console.log(index);
         for (var i = 0; i <= lis.length - 1; i++) {
             items[i].style.display = 'none';
         } // 设置索引号
@@ -77,3 +77,48 @@ else {
         }
     }
 }
+
+// 第二屏
+var tab2e = document.querySelector('.btn-2');
+var conC = document.querySelector('.conC');
+var tab2C = document.createElement('li');
+var waits = 3;
+tab2e.addEventListener('click', function () {
+    conC.appendChild(tab2C);
+    tab2C.innerHTML = '请耐心等待' + waits + '秒';
+    var times = setInterval(tab2s, 1000);
+    function tab2s() {
+        if (waits !== 0) {
+            tab2C.innerHTML = '请耐心等待' + waits + '秒';
+            waits--;
+        } else {
+            tab2e.style.display = 'none'
+            conC.removeChild[0];
+            conC.appendChild(tab2C);
+            tab2C.innerHTML = tab2Cc;
+            tab2C.children[0].className = 'dataIndex'
+            clearInterval(times);
+        }
+    }// 第二屏图片样式
+    var time2 = setInterval(fn22, 2000);
+    function fn22() {
+        if (tab2C.children[0] !== undefined) {
+            var dataIndex = document.querySelector('.dataIndex')
+            // 使用addEventListener会出现事件冒泡
+            dataIndex.onclick = function () {
+                var imggif = document.createElement('img');
+                conC.children[0].style.display = 'none'
+                conC.appendChild(imggif);
+                imggif.src = imgsrc;
+                clearInterval(time2);
+            }
+        }
+        else {
+            console.log('Tab2函数不会执行');
+        }
+    }
+});
+
+
+
+
