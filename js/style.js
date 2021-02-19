@@ -13,6 +13,11 @@ for (var i = 0; i <= lis.length - 1; i++) {
     }
 }
 // 主页打字效果 待写
+// 底部样式和顶部样式
+var footers = document.querySelector('footer');
+footers.innerHTML = foots;
+var headers = document.querySelector('.dengl')
+headers.innerHTML = heads;
 // 第一屏
 var itemBtn = document.querySelector('.item_btn');
 var itspan = document.querySelector('.item').querySelector('span');

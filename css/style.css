@@ -6,62 +6,72 @@
 html {
     font-size: 16px;
 }
-/* 鼠标样式 */
-body{
-    cursor:url(https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/default.cur),default;
-}
-a,input,button,img,i,em{
-    cursor: url(https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/pointer.cur),pointer;
 
+/* 鼠标样式 */
+
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/default.cur), default;
 }
+
+a, input, button, img, i, em {
+    cursor: url(https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/pointer.cur), pointer;
+}
+
 /* 灯笼优化 */
 
 header .d1 p, header .d2 p {
     top: -0.875rem;
 }
+
 /* Tab图标 */
-.tab1 li::before{
+
+.tab1 li::before {
     font-family: "Font Awesome 5 Free";
     margin-right: .125rem;
-    display: inline-block;  
+    display: inline-block;
     transform-origin: center;
     font-size: .875rem;
 }
-.tab1 li:nth-child(1)::before{
+
+.tab1 li:nth-child(1)::before {
     content: '\f863';
     color: #e36161;
     animation: iconrotate1 2s infinite linear;
 }
-.tab1 li:nth-child(2)::before{
+
+.tab1 li:nth-child(2)::before {
     content: '\f19d';
-    color:#544141;
+    color: #544141;
     animation: iconrotate2 2.2s infinite linear;
 }
-@keyframes iconrotate2{
-    0%{
+
+@keyframes iconrotate2 {
+    0% {
         transform: rotate(0deg);
     }
-    25%{
+    25% {
         transform: rotate(15deg);
     }
-    50%{
+    50% {
         transform: rotate(0deg);
     }
-    75%{
+    75% {
         transform: rotate(-15deg);
     }
-    100%{
+    100% {
         transform: rotate(0);
     }
 }
-@keyframes iconrotate1{
-    0%{
+
+@keyframes iconrotate1 {
+    0% {
         transform: rotate(0);
     }
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }
+
 /* 黑白主题转换 */
 
 .theme {
@@ -94,13 +104,13 @@ body {
 .title {
     position: relative;
     width: 100%;
-    top: 3.125rem;
+    top: 0.125rem;
 }
 
 .title h1 {
     text-align: center;
     font-size: 2.625rem;
-    margin: 3.125rem;
+    margin: 2.125rem;
     text-shadow: .3125rem .3125rem rgba(9, 129, 89, 0.247);
     animation: falsh 2s infinite linear;
 }
@@ -201,7 +211,7 @@ a {
     position: relative;
     width: 31.25rem;
     height: 18.75rem;
-    margin: 6.5rem auto 0;
+    margin: 3.5rem auto 0;
     border-top: .0625rem solid #888;
     border-radius: .625rem;
     overflow: hidden;
@@ -213,13 +223,17 @@ a {
 @media screen and (max-width:970px) {
     #tab {
         width: 20rem;
+        margin: 2.2rem auto 0;
     }
-    .tab1 li::before{
+    .msec {
+        width: 21.25rem;
+    }
+    .tab1 li::before {
         display: none;
     }
 }
 
-.tab1{
+.tab1 {
     display: inline-flex;
     width: 100%;
     align-items: center;
@@ -236,7 +250,7 @@ a {
     border-left: 0;
     font-weight: 550;
     transition: all .6s;
-    background-color: rgb(200,109, 109,.28);
+    background-color: rgb(200, 109, 109, .28);
 }
 
 .tab_con {
@@ -250,7 +264,6 @@ a {
     background: -moz-linear-gradient(left, rgba(138, 71, 71, 0.094), rgba(162, 170, 85, 0.102), rgba(54, 85, 185, 0.102));
     background: -o-linear-gradient(left, rgba(138, 71, 71, 0.094), rgba(162, 170, 85, 0.102), rgba(54, 85, 185, 0.102));
     background: -ms-linear-gradient(left, rgba(138, 71, 71, 0.094), rgba(162, 170, 85, 0.102), rgba(54, 85, 185, 0.102));
-
 }
 
 .item:nth-child(2) {
@@ -330,7 +343,9 @@ input, button {
     padding-left: .5875rem;
     border-radius: .4375rem;
     border: .0625rem solid #12774d;
+    background-color: #e5e2ef;
     font-size: .75rem;
+    font-weight: 550;
 }
 
 .item .b-log {
@@ -340,7 +355,9 @@ input, button {
     border-radius: .4375rem;
     width: 3.125rem;
     border: .0625rem solid #12774d;
+    background-color: #e5e2ef;
     font-size: .65rem;
+    font-weight: 550;
 }
 
 .item .b-log:hover {
@@ -365,63 +382,74 @@ input, button {
     width: 15.4375rem;
     height: 8.125rem;
     margin: 0 auto;
-    padding-top:2rem;
+    padding-top: 2rem;
 }
-.tab2 li{
+
+.tab2 li {
     height: 30px;
     line-height: 30px;
     position: relative;
 }
-.tab2 li:nth-child(1) span::after{   
+
+.tab2 li:nth-child(1) span::after {
     width: 6.25rem;
-    background-color: #0d7275; 
-    animation: movejd 1s linear;  
+    background-color: #0d7275;
+    animation: movejd 1s linear;
 }
-.tab2 li:nth-child(2) span::after{   
+
+.tab2 li:nth-child(2) span::after {
     width: 8.25rem;
     background-color: #334450;
     animation: movejd 1.2s linear;
 }
-.tab2 li:nth-child(3) span::after{   
+
+.tab2 li:nth-child(3) span::after {
     width: 5.25rem;
     background-color: #a14661;
     animation: movejd .8s linear;
 }
-.tab2 li span::after{
+
+.tab2 li span::after {
     content: '';
-    position: absolute;  
+    position: absolute;
     height: .625rem;
     top: -2px;
     left: -2px;
     display: inline-block;
     border-radius: .625rem;
-    background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, 0.4) 25%,transparent 0,transparent 50%,hsla(0, 0%, 100%, 0.4) 0,hsla(0,0%,100%,.4) 75%,transparent 0,transparent); 
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.4) 25%, transparent 0, transparent 50%, hsla(0, 0%, 100%, 0.4) 0, hsla(0, 0%, 100%, .4) 75%, transparent 0, transparent);
 }
-@keyframes movejd{
-    0%{
+
+@keyframes movejd {
+    0% {
         width: 0;
     }
-    100%{
+    100% {
         width: 100%;
     }
 }
+
 /* 字体样式 */
-.tab2 li:nth-child(1)::before{
-    content: '\f13b';   
-}
-.tab2 li:nth-child(2)::before{
-    content: '\f13c';   
-}
-.tab2 li:nth-child(3)::before{
-    content: '\f3b9';   
+
+.tab2 li:nth-child(1)::before {
+    content: '\f13b';
 }
 
-.tab2 li::before{
-    font-family:"Font Awesome 5 Brands";
+.tab2 li:nth-child(2)::before {
+    content: '\f13c';
+}
+
+.tab2 li:nth-child(3)::before {
+    content: '\f3b9';
+}
+
+.tab2 li::before {
+    font-family: "Font Awesome 5 Brands";
     display: inline-block;
     margin-right: .1875rem;
 }
-.tab2 span{
+
+.tab2 span {
     position: absolute;
     left: 66px;
     top: 11px;
@@ -432,7 +460,8 @@ input, button {
     border: .125rem solid #4d4d4d;
     border-radius: .625rem;
 }
-.item:nth-child(2) .btn-2{
+
+.item:nth-child(2) .btn-2 {
     width: 5.125rem;
     height: 1.65rem;
     background-color: rgba(164, 124, 83, 0.529);
@@ -441,35 +470,178 @@ input, button {
     margin: 0 auto;
     box-shadow: 0px 0px 2px 0px rgb(57, 58, 33);
 }
-.item:nth-child(2) .btn-2:hover{
+
+.item:nth-child(2) .btn-2:hover {
     transition: all .4s;
     background-color: rgba(202, 166, 100, 0.493);
     color: #000;
     font-size: .875rem;
     font-weight: 600;
 }
+
 /* 第二屏点击后的样式 */
-.conC{
+
+.conC {
     width: 100%;
     height: 6.25rem;
     padding: .25rem .625rem 0;
 }
-.conC li{
-    border: .125rem solid #3b8d99;
+
+.conC li {
+    border: .125rem solid rgba(108, 190, 202, 0.361);
     width: 100%;
     font-size: .75rem;
     text-indent: 2rem;
     border-radius: .375rem;
-    background-color: #6cbeca;
+    background-color: rgba(108, 190, 202, 0.361)
 }
-.conC li em{
+
+.conC li em {
     color: red;
     padding: 0;
     margin: 0;
 }
-.conC img{
+
+.conC img {
     margin: 0 auto;
     display: block;
     width: 7.75rem;
     border-radius: .375rem;
+}
+
+/* 底部导航栏 */
+
+section {
+    margin: 2.625rem auto 0;
+    border-radius: .625rem;
+    box-shadow: 0px 2px 12px 2px rgba(111, 96, 96, 0.46);
+    width: 35.25rem;
+    height: 3.75rem;
+    background-color: rgba(91, 57, 57, 0.151);
+}
+
+section:hover {
+    transition: all .5s;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+section ul {
+    width: 100%;
+    display: inline-flex;
+    height: 100%;
+}
+
+section ul a {
+    flex: 1;
+    height: 80%;
+    text-align: center;
+    position: relative;
+}
+
+section ul a li {
+    margin: .3125rem;
+    font-size: 1.795rem;
+    text-shadow: 1px 1px 1px #1a211e;
+    padding-top: .4125rem;
+}
+/* 二维码 */
+section ul a:nth-child(2):hover:before {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: 12px;
+    width: 4.5rem;
+    height: 4.3rem;
+    border: 1px solid #7c7e7c;
+    border-radius: .625rem;
+    background: url(https://7.dusays.com/2021/02/19/f6bc8a9a6634e.webp) no-repeat;
+    background-size: 4.5rem;
+}
+
+section ul a:nth-child(2):hover:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: .0625rem;
+    left: 2.1875rem;
+    border-top: 8px solid #cfcfcf;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+}
+section ul a:nth-child(3):hover:before {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: 12px;
+    width: 4.5rem;
+    height: 4.3rem;
+    border: 1px solid #7c7e7c;
+    border-radius: .625rem;
+    background: url(https://7.dusays.com/2021/02/19/4490b409350de.webp) no-repeat;
+    background-size: 4.5rem;
+}
+
+section ul a:nth-child(3):hover:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: .0625rem;
+    left: 2.1875rem;
+    border-top: 8px solid #cfcfcf;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+}
+
+@keyframes flter {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(0);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+section ul a:nth-child(1) {
+    color: #24292e;
+}
+
+section ul a:nth-child(2) {
+    color: #10a4ff;
+}
+
+section ul a:nth-child(3) {
+    color: #00bf03;
+}
+
+section ul a:nth-child(4) {
+    color: #ff0000;
+}
+
+section ul a:nth-child(5) {
+    color: #0e0618;
+}
+
+section ul a:nth-child(6) {
+    color: #10a4ff;
+}
+
+section ul a li:hover {
+    animation: flter 2s linear;
+}
+
+section ul a:hover {
+    transition: all .4s;
+    transform: scale(1.3);
 }

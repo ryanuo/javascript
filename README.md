@@ -11,6 +11,8 @@
 4. 主页标题使用 CSS3中的动画，还有文字阴影搭配使用
 5. Tab栏,昼夜交替使用了`JavaScript排他思想`，设置自定义属性
 6. 主页加入【[牛年灯笼特效](https://u.mr90.top/posts/8914/)】
+7. 加入鼠标样式，底部引入导航信息栏-仿`Rocketdock`
+![](https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/footnav1.gif)
 
 ## Tab栏介绍
 
