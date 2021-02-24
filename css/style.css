@@ -2,6 +2,17 @@
     margin: 0;
     padding: 0;
 }
+/* 禁用长按 */
+img, a {
+    -webkit-touch-callout: none;
+}
+
+body {
+    width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 
 html {
     font-size: 16px;
@@ -13,7 +24,7 @@ body {
     cursor: url(https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/default.cur), default;
 }
 
-a, input, button, img, i, em {
+a, input, button, img, i, em ,.shuff li{
     cursor: url(https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/pointer.cur), pointer;
 }
 
@@ -72,7 +83,43 @@ header .d1 p, header .d2 p {
     }
 }
 
+/* 昼夜模式切换弹出提示 */
+
+.dlswitch {
+    position: absolute;
+    right: 9.375rem;
+    display: none;
+    width: 10.25rem;
+    height: 2.75rem;
+    background-color: #0d3a75;
+    border-radius: .625rem;
+    color: #fff;
+    font-size: 1.05rem;
+    text-align: center;
+    line-height: 2.75rem;
+    font-weight: 550;
+}
+
 /* 黑白主题转换 */
+
+.dswitch {
+    animation: dlswitch 2.49s linear;
+}
+
+@keyframes dlswitch {
+    0% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(2rem);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(4.02rem);
+        opacity: 0.5;
+    }
+}
 
 .theme {
     position: absolute;
@@ -209,8 +256,8 @@ a {
 
 .tab {
     position: relative;
-    width: 31.25rem;
-    height: 18.75rem;
+    width: 55.25rem;
+    height: 20.75rem;
     margin: 3.5rem auto 0;
     border-top: .0625rem solid #888;
     border-radius: .625rem;
@@ -218,25 +265,10 @@ a {
     box-shadow: .0625rem .0625rem .1875rem #888;
 }
 
-/* 移动端适配 */
-
-@media screen and (max-width:970px) {
-    #tab {
-        width: 20rem;
-        margin: 2.2rem auto 0;
-    }
-    .msec {
-        width: 21.25rem;
-    }
-    .tab1 li::before {
-        display: none;
-    }
-}
-
 .tab1 {
     display: inline-flex;
     width: 100%;
-    align-items: center;
+    /* align-items: center; */
     font-size: .8125rem;
 }
 
@@ -281,6 +313,9 @@ a {
 .item:nth-child(5) {
     background: -webkit-linear-gradient(left, rgba(72, 73, 139, 0.286), rgba(85, 119, 170, 0.255), rgba(54, 185, 174, 0.239));
 }
+.item:nth-child(6) {
+    background: -webkit-linear-gradient(left, rgba(133, 193, 243, 0.286), rgba(159, 247, 101, 0.255), rgba(95, 241, 229, 0.239));
+}
 
 .tab1 li:hover {
     background-color: #12774d;
@@ -304,7 +339,7 @@ input, button {
 }
 
 .item:nth-child(1) img {
-    margin: 1.5625rem auto .625rem;
+    margin: 4.5625rem auto .625rem;
     border-radius: .625rem;
     width: 8.375rem;
     filter: blur(.5px);
@@ -545,7 +580,9 @@ section ul a li {
     text-shadow: 1px 1px 1px #1a211e;
     padding-top: .4125rem;
 }
+
 /* 二维码 */
+
 section ul a:nth-child(2):hover:before {
     content: '';
     position: absolute;
@@ -570,6 +607,7 @@ section ul a:nth-child(2):hover:after {
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
 }
+
 section ul a:nth-child(3):hover:before {
     content: '';
     position: absolute;
@@ -644,4 +682,132 @@ section ul a li:hover {
 section ul a:hover {
     transition: all .4s;
     transform: scale(1.3);
+}
+
+/* 底部右侧留言板样式 */
+
+.container, .box, .box2 {
+    border-radius: 10px 0 0 10px;
+}
+
+.container {
+    position: absolute;
+    right: 0px;
+    bottom: 3.125rem;
+    width: 2.125rem;
+    height: 2.125rem;
+}
+
+.box, .box2 {
+    position: absolute;
+    bottom: 0px;
+    height: 2.125rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 2.125rem;
+    background-color: rgb(66, 40, 139);
+}
+
+.box2 a {
+    position: relative;
+    color: #fff;
+    margin-left: 2rem;
+}
+
+.box2 a::before {
+    position: absolute;
+    content: '\f4ad';
+    font-family: "Font Awesome 5 Free";
+    top: -2px;
+    left: -20px;
+    font-size: 1rem;
+}
+
+.box {
+    z-index: 1;
+    width: 30px;
+    right: 0;
+    text-align: center;
+}
+
+.box2 {
+    right: -4.85rem;
+    width: 6.25rem;
+}
+/* 轮播图小圆点 */
+.lunbo{
+    position: relative;
+    width: 25rem;
+    height: .625rem;
+    margin: 20px auto 0;
+}
+.shuff {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 12.5rem;
+    height: 1.875rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.shuff .data-lunbo{
+    display: none;
+    width: 20px;
+    background-color: rgb(90, 79, 79);
+}
+.shuff li{
+    width: 10px;
+    display: inline-block;
+    height: 10px;
+    margin: 3px 6px;
+    border-radius: 5px;
+    border: 2px solid rgb(116 128 122);
+    background-color: rgb(191 178 178)
+
+}
+.shuff li:hover{
+    transform: scale(1.2);
+    transition: all .4s;
+}
+
+/* 移动端适配 */
+
+@media screen and (max-width:970px) {
+    #tab {
+        width: 24rem;
+        margin: 4.2rem auto 0;
+        height: 22.875rem;
+    }
+    .title {
+        top: 0.125rem;
+    }
+    .msec {
+        width: 21.25rem;
+    }
+    .tab1 li::before {
+        display: none;
+    }
+    #container {
+        display: none;
+    }
+    /* 适配移动端的TAB栏 */
+    .tab {
+        display: flex;
+    }
+    .tab .tab1 {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .tab .tab1 li {
+        line-height: 48px;
+    }
+    .tab .tab_con {
+        flex: 4;
+    }
+    /* 第一屏 */
+    .tab_con .item:nth-child(1) a img {
+        margin-top: 6.25rem;
+    }
 }
