@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
+
 /* 禁用长按 */
+
 img, a {
     -webkit-touch-callout: none;
 }
@@ -24,7 +26,7 @@ body {
     cursor: url(https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/default.cur), default;
 }
 
-a, input, button, img, i, em ,.shuff li{
+a, input, button, img, i, em, .shuff li {
     cursor: url(https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/pointer.cur), pointer;
 }
 
@@ -54,6 +56,40 @@ header .d1 p, header .d2 p {
     content: '\f19d';
     color: #544141;
     animation: iconrotate2 2.2s infinite linear;
+}
+
+.tab1 li:nth-child(5)::before {
+    content: '\f201';
+    color: #6a62ad;
+    animation: iconrotate5 2.2s infinite linear;
+}
+
+.tab1 li:nth-child(6)::before {
+    content: '\f05a';
+    color: #0d122c;
+    animation: iconrotate6 1s infinite linear;
+}
+
+@keyframes iconrotate6 {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes iconrotate5 {
+    0% {}
+    50% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(2px);
+    }
 }
 
 @keyframes iconrotate2 {
@@ -125,6 +161,7 @@ header .d1 p, header .d2 p {
     position: absolute;
     right: .5625rem;
     bottom: .25rem;
+    z-index: 999;
 }
 
 .theme-light {
@@ -313,6 +350,7 @@ a {
 .item:nth-child(5) {
     background: -webkit-linear-gradient(left, rgba(72, 73, 139, 0.286), rgba(85, 119, 170, 0.255), rgba(54, 185, 174, 0.239));
 }
+
 .item:nth-child(6) {
     background: -webkit-linear-gradient(left, rgba(133, 193, 243, 0.286), rgba(159, 247, 101, 0.255), rgba(95, 241, 229, 0.239));
 }
@@ -339,7 +377,7 @@ input, button {
 }
 
 .item:nth-child(1) img {
-    margin: 4.5625rem auto .625rem;
+    margin: 3.8625rem auto .625rem;
     border-radius: .625rem;
     width: 8.375rem;
     filter: blur(.5px);
@@ -414,10 +452,22 @@ input, button {
 
 .tab2 {
     position: relative;
-    width: 15.4375rem;
-    height: 8.125rem;
-    margin: 0 auto;
-    padding-top: 2rem;
+    width: 100%;
+    height: 10.125rem;
+    padding-top: 3.5rem;
+}
+
+.tab2 .skilled {
+    position: absolute;
+    left: calc(6%);
+    /* float: left; */
+}
+
+.skilling {
+    /* border: 1px dashed #0d7275; */
+    position: absolute;
+    right: calc(28%);
+    /* float: right; */
 }
 
 .tab2 li {
@@ -426,21 +476,45 @@ input, button {
     position: relative;
 }
 
-.tab2 li:nth-child(1) span::after {
+.skilled li:nth-child(2) span::after {
     width: 6.25rem;
     background-color: #0d7275;
     animation: movejd 1s linear;
 }
 
-.tab2 li:nth-child(2) span::after {
+.skilled li:nth-child(3) span::after {
     width: 8.25rem;
-    background-color: #334450;
+    background-color: #a14661;
     animation: movejd 1.2s linear;
 }
 
-.tab2 li:nth-child(3) span::after {
+.skilled li:nth-child(4) span::after {
     width: 5.25rem;
-    background-color: #a14661;
+    background-color: #334450;
+    animation: movejd .8s linear;
+}
+
+.skilled li:nth-child(5) span::after {
+    width: 2.25rem;
+    background-color: #81a146;
+    animation: movejd .8s linear;
+}
+
+.skilling li:nth-child(2) span::after {
+    width: 1rem;
+    background-color: #3fb27f;
+    animation: movejd .8s linear;
+}
+
+.skilling li:nth-child(3) span::after {
+    width: 1rem;
+    background-color: #61dafb;
+    animation: movejd .8s linear;
+}
+
+.skilling li:nth-child(4) span::after {
+    width: 1rem;
+    background-color: #1f425f;
     animation: movejd .8s linear;
 }
 
@@ -466,16 +540,39 @@ input, button {
 
 /* 字体样式 */
 
-.tab2 li:nth-child(1)::before {
+.skilled li:nth-child(2)::before {
     content: '\f13b';
+    color: #0d7275;
 }
 
-.tab2 li:nth-child(2)::before {
+.skilled li:nth-child(3)::before {
     content: '\f13c';
+    color: #a14661;
 }
 
-.tab2 li:nth-child(3)::before {
+.skilled li:nth-child(4)::before {
     content: '\f3b9';
+    color: #334450;
+}
+
+.skilled li:nth-child(5)::before {
+    content: '\f77a';
+    color: #81a146;
+}
+
+.skilling li:nth-child(2)::before {
+    content: '\f41f';
+    color: #3fb27f;
+}
+
+.skilling li:nth-child(3)::before {
+    content: '\f41b';
+    color: #61dafb;
+}
+
+.skilling li:nth-child(4)::before {
+    content: '\f3e2';
+    color: #1f425f;
 }
 
 .tab2 li::before {
@@ -496,22 +593,42 @@ input, button {
     border-radius: .625rem;
 }
 
+/* 第二屏按钮样式 */
+
 .item:nth-child(2) .btn-2 {
+    position: relative;
     width: 5.125rem;
     height: 1.65rem;
-    background-color: rgba(164, 124, 83, 0.529);
-    border-radius: .725rem;
+    background-color: rgba(92, 190, 219, 0.529);
     text-align: center;
     margin: 0 auto;
     box-shadow: 0px 0px 2px 0px rgb(57, 58, 33);
 }
 
-.item:nth-child(2) .btn-2:hover {
+.item:nth-child(2) .btn-2::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(177, 141, 75, 0.493);
+}
+
+.item:nth-child(2) .btn-2::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(177, 141, 75, 0.493);
+}
+
+.item:nth-child(2) .btn-2:hover::before, .item:nth-child(2) .btn-2:hover::after {
     transition: all .4s;
-    background-color: rgba(202, 166, 100, 0.493);
+    width: 50%;
     color: #000;
-    font-size: .875rem;
-    font-weight: 600;
 }
 
 /* 第二屏点击后的样式 */
@@ -525,7 +642,7 @@ input, button {
 .conC li {
     border: .125rem solid rgba(108, 190, 202, 0.361);
     width: 100%;
-    font-size: .75rem;
+    font-size: .9375rem;
     text-indent: 2rem;
     border-radius: .375rem;
     background-color: rgba(108, 190, 202, 0.361)
@@ -686,11 +803,11 @@ section ul a:hover {
 
 /* 底部右侧留言板样式 */
 
-.container, .box, .box2 {
+.containers, .box, .box2 {
     border-radius: 10px 0 0 10px;
 }
 
-.container {
+.containers {
     position: absolute;
     right: 0px;
     bottom: 3.125rem;
@@ -735,13 +852,16 @@ section ul a:hover {
     right: -4.85rem;
     width: 6.25rem;
 }
+
 /* 轮播图小圆点 */
-.lunbo{
+
+.lunbo {
     position: relative;
     width: 25rem;
     height: .625rem;
     margin: 20px auto 0;
 }
+
 .shuff {
     display: flex;
     justify-content: space-evenly;
@@ -751,12 +871,14 @@ section ul a:hover {
     left: 50%;
     transform: translateX(-50%);
 }
-.shuff .data-lunbo{
+
+.shuff .data-lunbo {
     display: none;
     width: 20px;
     background-color: rgb(90, 79, 79);
 }
-.shuff li{
+
+.shuff li {
     width: 10px;
     display: inline-block;
     height: 10px;
@@ -764,11 +886,114 @@ section ul a:hover {
     border-radius: 5px;
     border: 2px solid rgb(116 128 122);
     background-color: rgb(191 178 178)
-
 }
-.shuff li:hover{
+
+.shuff li:hover {
     transform: scale(1.2);
     transition: all .4s;
+}
+
+/* 第五屏时光轴 */
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(50, 57, 61, 0.2);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #202b33;
+    background-image: -webkit-linear-gradient(45deg, hsla(0, 0%, 100%, 0.4) 25%, transparent 0, transparent 50%, hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, .4) 75%, transparent 0, transparent);
+    border-radius: 2em;
+}
+
+.item:nth-child(5) {
+    padding: .625rem;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    height: 91%;
+    padding: .3125rem;
+    border: double #0d122c;
+    border-radius: .625rem;
+    overflow: auto;
+}
+
+.timecon::before {
+    content: '';
+    width: .3125rem;
+    position: absolute;
+    left: 5px;
+    height: 56%;
+    background-color: #114350;
+}
+
+.timecon h4 {
+    display: inline-block;
+    position: relative;
+    margin: 0 .1875rem 0 1.375rem;
+}
+
+.timecon h4::before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: .75rem;
+    left: -1.75rem;
+    width: .375rem;
+    height: .375rem;
+    border-radius: .5rem;
+    border: .375rem solid #114350;
+    background-color: #070705;
+}
+
+.timecon h4:hover:before {
+    transition: all .4s;
+    transform: scale(1.1);
+}
+
+.timecon ol {
+    position: relative;
+    counter-reset: section;
+    /* 为每个ol元素创建新的计数器实例 */
+    list-style-type: none;
+    margin-left: 1.225rem;
+    padding: .3125rem 1.625rem;
+    background-color: rgba(129, 118, 118, 0.205);
+    border-radius: .625rem;
+}
+
+.timecon ol li:before {
+    counter-increment: section;
+    /* 只增加计数器的当前实例 */
+    content: counters(section, ".") " ";
+    /* 为所有计数器实例增加以“.”分隔的值 */
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: .5rem;
+    background-color: #5246e2;
+    color: #fff;
+    line-height: 1rem;
+    text-align: center;
+    margin: .1875rem 0 0;
+    font-size: .8125rem;
+    left: .1875rem;
+}
+.timecon ol li:hover::before{
+    animation: rotateolli .5s linear;
+}
+@keyframes rotateolli {
+    0%{}
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 /* 移动端适配 */
@@ -788,7 +1013,7 @@ section ul a:hover {
     .tab1 li::before {
         display: none;
     }
-    #container {
+    #containers {
         display: none;
     }
     /* 适配移动端的TAB栏 */
@@ -809,5 +1034,16 @@ section ul a:hover {
     /* 第一屏 */
     .tab_con .item:nth-child(1) a img {
         margin-top: 6.25rem;
+    }
+    .tab2 .skilling {
+        bottom: -190px;
+        left: calc(6%);
+    }
+    .tab2 {
+        padding-top: .5rem;
+    }
+    /* 第五屏移动端 */
+    .timeline {
+        height: 100%;
     }
 }

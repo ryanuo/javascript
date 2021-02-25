@@ -12,11 +12,12 @@
 5. Tab栏,昼夜交替使用了`JavaScript排他思想`，设置自定义属性
 6. 主页加入【[牛年灯笼特效](https://u.mr90.top/posts/8914/)】
 7. 加入鼠标样式，底部引入导航信息栏-仿`Rocketdock`
-![](https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/footnav1.gif)
 8. 优化昼夜模式，加入切换昼夜模式提示框，使用JavaScript中的定时器和缓动动画函数+CSS3动画
 9. pc端底部增加留言板，触碰后显示留言板，使用JavaScript中的缓动动画函数
 10. 去除页面灯笼样式，页面加入jQuery插件,页面去除原生Tab栏使用jQuery框架，加入切换小圆点
+11. 修复Tab切换后，昼夜按钮消失bug;页面加入svg动画jQuery;加入第五屏时间轴，纯css3;第二屏移动端，点击后技能板块移除
 
+![](https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/mainpadge31923.gif)
 ## Tab栏介绍
 
 1. 第一屏
@@ -27,7 +28,7 @@
 ![](https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/tab2dw.gif)
 3. 第三屏 待写
 4. 第四屏 待写
-5. 第五屏 待写
+5. 第五屏 时间轴，纯css3
 6. 第六屏
 
 ## 仓库地址

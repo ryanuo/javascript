@@ -41,7 +41,7 @@ ibtn.onclick = function () {
     }
 }
 // 底部右侧留言板样式
-var container = document.querySelector('.container');
+var container = document.querySelector('.containers');
 var box2 = document.querySelector('.box2');
 var box = document.querySelector('.box');
 // console.log(box2.offsetWidth);  //获取盒子的宽度
@@ -131,9 +131,13 @@ else {
 }
 
 // 第二屏
+
 var tab2e = document.querySelector('.btn-2');
 var conC = document.querySelector('.conC');
 var tab2C = document.createElement('li');
+var tab2 = document.querySelector('.tab2')
+var skilled = document.querySelector('.skilled')
+var skilling = document.querySelector('.skilling')
 var waits = 3;
 tab2e.addEventListener('click', function () {
     conC.appendChild(tab2C);
@@ -181,7 +185,6 @@ $(function () {
         var li = $('<li></li>')
         $('.shuff').append(li);
     }
-    // .addClass('data-lunbo')
     // 使用while循环
     // var i = 0;
     // while(i != $('.item').length){
@@ -208,8 +211,34 @@ $(function () {
             // console.log($('.shuff li').eq(index).siblings());
             $('.shuff li').eq(index).addClass('data-lunbo').stop().fadeIn(1200);
             $('.shuff li').eq(index).siblings().removeClass('data-lunbo')
+            $('.theme').stop().fadeIn().show()
         })
     })
+    // 第二屏点击后去除技能样式
+
+$('.btn-2').on('click',function(){
+    $('.tab2').css('paddingTop','.5rem');
+    if(window.innerWidth < 900){
+        $(this).prevAll().remove();
+        $(this).css('top',20);
+        $('.conC').css('padding','4.25rem .625rem 0')
+    }
 })
+
+// 页面右上角的小玩意
+$('.container').html(svg5);
+
+// 时光轴案例，这里使用jQuery，自动获取时间轴高度  实现自适应高度
+// $('.tab1 li:eq(4)').on({
+//     click:function(){
+//         console.log($('.timecon').height());
+//         $('.timecon').append('<style>.timecon:before{height:'+$('.timecon').height()+'px}</style>')
+//     }
+// })
+
+})
+
+
+
 
 
