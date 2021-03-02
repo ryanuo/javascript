@@ -165,7 +165,7 @@ header .d1 p, header .d2 p {
 }
 
 .theme-light {
-    background: -webkit-linear-gradient(left, rgba(70, 33, 26, 0.176), rgba(95, 59, 83, 0.322), rgba(68, 24, 26, 0.239));
+    background: -webkit-linear-gradient(left, rgb(26,64 ,70 ,18%), rgb(59, 86, 95 , 32%), rgb(24, 40, 68 , 24%));
 }
 
 .theme-dark {
@@ -194,7 +194,7 @@ body {
 .title h1 {
     text-align: center;
     font-size: 2.625rem;
-    margin: 2.125rem;
+    margin: 2rem;
     text-shadow: .3125rem .3125rem rgba(9, 129, 89, 0.247);
     animation: falsh 2s infinite linear;
 }
@@ -294,8 +294,8 @@ a {
 .tab {
     position: relative;
     width: 55.25rem;
-    height: 20.75rem;
-    margin: 3.5rem auto 0;
+    height: 22.75rem;
+    margin: 1.5rem auto 0;
     border-top: .0625rem solid #888;
     border-radius: .625rem;
     overflow: hidden;
@@ -411,7 +411,7 @@ input, button {
 
 .item #blog {
     width: 12.5rem;
-    height: 1.25rem;
+    height: 2.25rem;
     line-height: 1.25rem;
     padding-left: .5875rem;
     border-radius: .4375rem;
@@ -423,7 +423,7 @@ input, button {
 
 .item .b-log {
     margin-left: .3125rem;
-    height: 1.1375rem;
+    height: 2.1375rem;
     line-height: 1.05rem;
     border-radius: .4375rem;
     width: 3.125rem;
@@ -438,14 +438,16 @@ input, button {
     background-color: #098159;
     color: #fff;
 }
-
+.fa-github:before{
+    margin-right: .25rem;
+}
 .item span i {
     font-style: normal;
     font-size: .75rem;
     color: #236170;
     text-align: center;
-    margin-top: 1.1125rem;
     display: block;
+    margin-top: 1.125rem;
 }
 
 /* 第二屏设计 */
@@ -462,11 +464,20 @@ input, button {
     left: calc(6%);
     /* float: left; */
 }
+.tab .skilled,.skilling{
+    border: 2px solid #7a4f4f;
+    border-radius: 5px;
+    padding: 5px;
+    width: 16.25rem;
+}
+.tab2 .skilled h4,.skilling h4,.skilled li,.skilling li{
+    border-bottom: 2px solid #ccc;
+}
 
 .skilling {
     /* border: 1px dashed #0d7275; */
     position: absolute;
-    right: calc(28%);
+    right: 6%;
     /* float: right; */
 }
 
@@ -602,6 +613,7 @@ input, button {
     background-color: rgba(92, 190, 219, 0.529);
     text-align: center;
     margin: 0 auto;
+    border-radius: 5px;
     box-shadow: 0px 0px 2px 0px rgb(57, 58, 33);
 }
 
@@ -643,7 +655,8 @@ input, button {
     border: .125rem solid rgba(108, 190, 202, 0.361);
     width: 100%;
     font-size: .9375rem;
-    text-indent: 2rem;
+    margin-top: 8px;
+    text-align: center;
     border-radius: .375rem;
     background-color: rgba(108, 190, 202, 0.361)
 }
@@ -1035,6 +1048,10 @@ section ul a:hover {
     .tab_con .item:nth-child(1) a img {
         margin-top: 6.25rem;
     }
+    .item:nth-child(2) .btn-2{
+        top: 34px;
+        left: 58px;
+    }
     .tab2 .skilling {
         bottom: -190px;
         left: calc(6%);
@@ -1046,4 +1063,5 @@ section ul a:hover {
     .timeline {
         height: 100%;
     }
+
 }

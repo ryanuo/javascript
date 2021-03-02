@@ -2,6 +2,7 @@
 
 1. 此仓库用于JavaScript学习的实例化演示
 2. 边学边做
+3. jQuery学习
 
 ## 主页介绍
 
@@ -29,6 +30,7 @@
 3. 第三屏 待写
 4. 第四屏 待写
 5. 第五屏 时间轴，纯css3
+![](https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/133123123.gif)
 6. 第六屏
 
 ## 仓库地址

@@ -214,9 +214,10 @@ $(function () {
             $('.theme').stop().fadeIn().show()
         })
     })
-    // 第二屏点击后去除技能样式
 
+    // 第二屏点击后去除技能样式
 $('.btn-2').on('click',function(){
+    $('.tab2').css('transition','all .4s')
     $('.tab2').css('paddingTop','.5rem');
     if(window.innerWidth < 900){
         $(this).prevAll().remove();
@@ -229,12 +230,14 @@ $('.btn-2').on('click',function(){
 $('.container').html(svg5);
 
 // 时光轴案例，这里使用jQuery，自动获取时间轴高度  实现自适应高度
-// $('.tab1 li:eq(4)').on({
-//     click:function(){
-//         console.log($('.timecon').height());
-//         $('.timecon').append('<style>.timecon:before{height:'+$('.timecon').height()+'px}</style>')
-//     }
+
+// $('.tab1 li:eq(4)').on('click',function(){
+//     $('.timecon').each(function(i,ele){
+//         console.log($(ele).height());
+//         $('.timecon').eq(i).append('<style>.timecon:before{height:'+$(ele).height()+'px}</style>')
+//     })
 // })
+
 
 })
 
