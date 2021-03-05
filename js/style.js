@@ -13,7 +13,7 @@
 //     }
 // }
 
-// 主页打字效果 待写
+
 // 底部样式和顶部样式
 var footers = document.querySelector('footer');
 footers.innerHTML = foots;
@@ -216,29 +216,70 @@ $(function () {
     })
 
     // 第二屏点击后去除技能样式
-$('.btn-2').on('click',function(){
-    $('.tab2').css('transition','all .4s')
-    $('.tab2').css('paddingTop','.5rem');
-    if(window.innerWidth < 900){
-        $(this).prevAll().remove();
-        $(this).css('top',20);
-        $('.conC').css('padding','4.25rem .625rem 0')
-    }
-})
+    $('.btn-2').on('click', function () {
+        $('.tab2').css('transition', 'all .4s')
+        $('.tab2').css('paddingTop', '.5rem');
+        if (window.innerWidth < 900) {
+            $(this).prevAll().remove();
+            $(this).css('top', 20);
+            $('.conC').css('padding', '4.25rem .625rem 0')
+        }
+    })
 
-// 页面右上角的小玩意
-$('.container').html(svg5);
+    // 页面右上角的小玩意
+    $('.container').html(svg5);
 
-// 时光轴案例，这里使用jQuery，自动获取时间轴高度  实现自适应高度
+    // 时光轴案例，这里使用jQuery，自动获取时间轴高度  实现自适应高度
 
-// $('.tab1 li:eq(4)').on('click',function(){
-//     $('.timecon').each(function(i,ele){
-//         console.log($(ele).height());
-//         $('.timecon').eq(i).append('<style>.timecon:before{height:'+$(ele).height()+'px}</style>')
-//     })
-// })
+    // $('.tab1 li:eq(4)').on('click',function(){
+    //     $('.timecon').each(function(i,ele){
+    //         console.log($(ele).height());
+    //         $('.timecon').eq(i).append('<style>.timecon:before{height:'+$(ele).height()+'px}</style>')
+    //     })
+    // })
+    // 主页打字效果 待写 h5
+    // 输入字符的长度
+    // 第一种 打字机效果无删除效果
+    // var newarr = ''
+    // var i = 0;
+    // setInterval(function () {
+    //     // newarr.push(titleh5[i])
+    //     if (i != arr.length) {
+    //         newarr += arr[i]
+    //         i++;
+    //         console.log(newarr);
+    //         $('.title h5').text(newarr)
+    //     }else{
+    //        newarr = ''
+    //        i = 0;
+    //     }
+    // }, 500)
+    // 第二种  带有删除效果,但是速度只有一种
+    var newarr = ''
+    var i = 0;
+    var flag = 0;
+    setInterval(function () {
+        // newarr.push(titleh5[i])
+        if (i != arr.length && flag == 0) {
+            newarr += arr[i]
+            i++;
+            // console.log(newarr);
+            $('.title h5').text(newarr)
+        } else {
+            flag = 1;
+            newarr = newarr.substr(0, newarr.length - 1)
+            $('.title h5').text(newarr + '|')
+            i--;
+            if ($('.title h5').text().length == 1) {
+                flag = 0;
+                // console.log(arr);
+                i = 0;
+            }
+        }
+    }, 500)
 
-
+    //时光轴
+    $('.timeline').html(timeline)
 })
 
 

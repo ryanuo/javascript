@@ -930,21 +930,20 @@ section ul a:hover {
 
 .timeline {
     position: relative;
-    width: 100%;
+    /* width: 100%; */
     height: 91%;
     padding: .3125rem;
     border: double #0d122c;
     border-radius: .625rem;
     overflow: auto;
 }
-
 .timecon::before {
     content: '';
     width: .3125rem;
     position: absolute;
     left: 5px;
     height: 56%;
-    background-color: #114350;
+    background-color: #788589;
 }
 
 .timecon h4 {
@@ -962,7 +961,7 @@ section ul a:hover {
     width: .375rem;
     height: .375rem;
     border-radius: .5rem;
-    border: .375rem solid #114350;
+    border: .375rem solid #7ea7c1;
     background-color: #070705;
 }
 
@@ -972,6 +971,7 @@ section ul a:hover {
 }
 
 .timecon ol {
+    display: inline-block;
     position: relative;
     counter-reset: section;
     /* 为每个ol元素创建新的计数器实例 */
@@ -980,6 +980,7 @@ section ul a:hover {
     padding: .3125rem 1.625rem;
     background-color: rgba(129, 118, 118, 0.205);
     border-radius: .625rem;
+    font-size: .96875rem;
 }
 
 .timecon ol li:before {

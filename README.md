@@ -17,6 +17,7 @@
 9. pc端底部增加留言板，触碰后显示留言板，使用JavaScript中的缓动动画函数
 10. 去除页面灯笼样式，页面加入jQuery插件,页面去除原生Tab栏使用jQuery框架，加入切换小圆点
 11. 修复Tab切换后，昼夜按钮消失bug;页面加入svg动画jQuery;加入第五屏时间轴，纯css3;第二屏移动端，点击后技能板块移除
+12. 顶部标题加入打字机效果
 
 ![](https://cdn.jsdelivr.net/gh/Rr210/image@master/hexo/4/mainpadge31923.gif)
 ## Tab栏介绍
